@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:lib_getx_template/app/app.dart';
 import 'package:lib_getx_template/app/app_localizations.dart';
 import 'package:lib_getx_template/data/get_storage.dart';
 
@@ -27,9 +26,9 @@ class _LanguageButtonState extends State<LanguageButton> {
               }
               changeLocal(myLocale);
               box.write('local', myLocale);
-            //   box.listen(() {
-            //   print(box.read('local'));
-            // });
+              //   box.listen(() {
+              //   print(box.read('local'));
+              // });
             });
           },
           icon: const Icon(Icons.language))

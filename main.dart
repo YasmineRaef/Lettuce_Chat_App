@@ -5,6 +5,7 @@ import 'package:lib_getx_template/app/app.dart';
 import 'package:lib_getx_template/data/get_storage.dart';
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   await GetStorage.init();
   retrieveData();
   runApp(const App());
