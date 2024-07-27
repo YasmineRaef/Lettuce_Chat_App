@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:lib_getx_template/data/get_storage.dart';
 
 class AppTheme {
-  static ThemeMode themeMode = ThemeMode.light;
+  static ThemeMode themeMode = currentThemeMode;
   static ThemeData getLightTheme() {
     return ThemeData(
       appBarTheme: const AppBarTheme(

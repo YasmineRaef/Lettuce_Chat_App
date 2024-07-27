@@ -21,14 +21,16 @@ class _LanguageButtonState extends State<LanguageButton> {
             setState(() {
               if (checkCurrentLocale() == true) {
                 myLocale = const Locale('ar');
+                isEnglish = false;
               } else {
                 myLocale = const Locale('en');
+                isEnglish = true;
               }
               changeLocal(myLocale);
-              box.write('local', myLocale);
-              //   box.listen(() {
-              //   print(box.read('local'));
-              // });
+              box.write('isEnglish', isEnglish);
+              box.listen(() {
+                print(box.read('local'));
+              });
             });
           },
           icon: const Icon(Icons.language))

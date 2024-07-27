@@ -25,10 +25,17 @@ class _DarkLightButtonState extends State<DarkLightButton> {
             myState = (myState == Icons.dark_mode
                 ? Icons.light_mode
                 : Icons.dark_mode);
-            box.write('state', myState);
-            // box.listen(() {
-            //   print(box.read('state').toString());
-            // });
+            // if (myState == Icons.dark_mode) {
+            //   myState = Icons.light_mode;
+            //   isLight = true;
+            // } else {
+            //   myState = Icons.dark_mode;
+            //   isLight = false;
+            // }
+            box.write('isLight',  checkCurrentState(myState));
+            box.listen(() {
+              print(box.read('state').toString());
+            });
           });
           AppTheme.changeThemeMode();
         },

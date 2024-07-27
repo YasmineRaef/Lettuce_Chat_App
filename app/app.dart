@@ -12,12 +12,15 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
+      
+      locale: myLocale,
       supportedLocales: const [Locale('en'), Locale('ar')],
       localizationsDelegates: LocalizationDelegates,
       localeResolutionCallback: localResolutionCallback,
-      locale: myLocale,
+
       initialRoute: NamedRoutes.splash,
       getPages: GeneratedRoutes.getRoute(),
+
       theme: AppTheme.getLightTheme(),
       darkTheme: AppTheme.getDarkTheme(),
       themeMode: AppTheme.themeMode,

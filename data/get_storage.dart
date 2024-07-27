@@ -4,10 +4,19 @@ import 'package:get_storage/get_storage.dart';
 final box = GetStorage();
 late Locale myLocale;
 late IconData myState;
+late ThemeMode currentThemeMode;
+late bool isEnglish;
+late bool isLight;
 
 void retrieveData() {
-  var state = box.read('state'); //light
-  var local = box.read('local'); //en
-  local == null ? myLocale = const Locale('en') : myLocale = local;
-  state == null ? myState = Icons.light_mode : myState = state;
+  box.read('isEnglish') == false
+      ? myLocale = const Locale('ar')
+      : myLocale = const Locale('en');
+  if (box.read('isLight') == false) {
+    myState = Icons.light_mode;
+    currentThemeMode = ThemeMode.dark;
+  } else {
+    myState = Icons.dark_mode;
+    currentThemeMode = ThemeMode.light;
+  }
 }
