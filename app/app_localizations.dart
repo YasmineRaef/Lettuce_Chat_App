@@ -1,4 +1,5 @@
 import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -76,4 +77,4 @@ bool checkCurrentLocale() {
   return myLocale == const Locale('en');
 }
 
- void changeLocal(Locale myLocale) => Get.updateLocale(myLocale);
+void changeLocal(Locale myLocale) => Get.updateLocale(myLocale);

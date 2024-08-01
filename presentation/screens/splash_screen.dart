@@ -1,4 +1,5 @@
 import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lib_getx_template/app/app_localizations.dart';
@@ -14,7 +15,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Timer(const Duration(seconds: 3), () => Get.off(()=> const MyHomePage()));
+    Timer(const Duration(seconds: 3), () => Get.off(() => const MyHomePage()));
   }
 
   @override

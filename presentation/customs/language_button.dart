@@ -28,9 +28,6 @@ class _LanguageButtonState extends State<LanguageButton> {
               }
               changeLocal(myLocale);
               box.write('isEnglish', isEnglish);
-              box.listen(() {
-                print(box.read('local'));
-              });
             });
           },
           icon: const Icon(Icons.language))
